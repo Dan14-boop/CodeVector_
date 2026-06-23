@@ -42,6 +42,11 @@
   --error-color: #cc0000;
 }
 
+html, body, #root {
+  background: var(--bg);
+  min-height: 100vh;
+}
+
 body {
   background: var(--bg);
   color: var(--text);
@@ -54,6 +59,7 @@ body {
 .app {
   display: flex;
   min-height: 100vh;
+  background: var(--bg);
 }
 
 /* ── Sidebar ── */
@@ -91,7 +97,7 @@ body {
   flex-shrink: 0;
 }
 
-.logo-name { font-weight: 700; font-size: 0.92rem; letter-spacing: -0.02em; }
+.logo-name { font-weight: 700; font-size: 0.92rem; letter-spacing: -0.02em; color: var(--text); }
 .logo-sub { font-size: 0.68rem; color: var(--muted); margin-top: 1px; }
 
 .theme-toggle {
@@ -108,7 +114,7 @@ body {
 }
 .theme-toggle:hover { background: var(--surface-hover); }
 
-.nav { padding: 1rem 0.75rem; flex: 1; }
+.nav { padding: 1rem 0.75rem; flex: 1; background: var(--sidebar-bg); }
 
 .nav-label {
   font-size: 0.63rem;
@@ -161,6 +167,7 @@ body {
 .sidebar-footer {
   padding: 1rem 1.25rem;
   border-top: 1px solid var(--border);
+  background: var(--sidebar-bg);
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -173,7 +180,7 @@ body {
 }
 
 .stat-label { font-size: 0.7rem; color: var(--muted); }
-.stat-value { font-size: 0.78rem; font-weight: 700; }
+.stat-value { font-size: 0.78rem; font-weight: 700; color: var(--text); }
 
 .stat-badge {
   font-size: 0.62rem;
@@ -191,6 +198,7 @@ body {
   flex: 1;
   padding: 2rem;
   min-height: 100vh;
+  background: var(--bg);
 }
 
 .topbar {
@@ -206,6 +214,7 @@ body {
   font-size: 1.35rem;
   font-weight: 700;
   letter-spacing: -0.03em;
+  color: var(--text);
 }
 
 .page-count { font-size: 0.78rem; color: var(--muted); }
